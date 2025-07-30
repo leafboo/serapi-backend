@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
 })
 
 app.get("/papers", async (req, res) => {
-    const apiKey = "57d1e960a4fb9f61dfa7c9d06a4a64ad8c8fe959741dce4d9542e76035bd3c59";
+    const apiKey = "api key here";
     const query = req.query.q;
 
     

@@ -1,9 +1,10 @@
 FROM node:24
 
-COPY package.json /app/
-COPY index.js /app/
-
 WORKDIR /app
+
+COPY package*.json .
+COPY index.js .
 
 RUN npm install 
 
+CMD [ "node index.js" ]

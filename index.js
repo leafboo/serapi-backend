@@ -8,7 +8,6 @@ app.get("/", (req, res) => {
 })
 
 app.get("/papers", async (req, res) => {
-    const apiKey = "api key here";
     const query = req.query.q;
 
     
@@ -18,7 +17,7 @@ app.get("/papers", async (req, res) => {
         try {
             const response = await getJson({
                 engine: "google_scholar",
-                api_key: apiKey, 
+                api_key: process.env.apiKey, 
                 q: query,
                 location: "Austin, Texas",
             });

@@ -1,7 +1,11 @@
 const express = require('express');
 const { getJson } = require('serpapi');
+const cors = require('cors');
 
 const app = express();
+
+// Allow cors for any url from the incoming requests
+app.use(cors());
 
 app.get("/", (req, res) => {
     res.send("Welcome to the serpapi-search backend");
